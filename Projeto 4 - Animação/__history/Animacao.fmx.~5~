@@ -1,0 +1,77 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 277
+  ClientWidth = 241
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ShapeTransitionEffect1: TShapeTransitionEffect
+    Progress = 30.000000000000000000
+    RandomSeed = 0.300000011920929000
+  end
+  object Circle1: TCircle
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF6CEECF
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFF3FF519
+        Offset = 0.422360241413116500
+      end
+      item
+        Color = xFFDFF9F4
+        Offset = 0.633540391921997100
+      end
+      item
+        Color = xFFEAFBF8
+        Offset = 0.692546606063842800
+      end
+      item
+        Color = xFFFDFEFE
+        Offset = 0.791925489902496300
+      end
+      item
+        Color = claWhite
+        Offset = 0.798136651515960700
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 185.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claBlue
+    Stroke.Thickness = 15.000000000000000000
+    Stroke.Dash = Dot
+    object FloatAnimation1: TFloatAnimation
+      Duration = 0.500000000000000000
+      PropertyName = 'RotationAngle'
+      StartValue = 0.000000000000000000
+      StopValue = 360.000000000000000000
+    end
+  end
+  object Button1: TButton
+    Cursor = crHandPoint
+    Position.X = 95.000000000000000000
+    Position.Y = 201.000000000000000000
+    Scale.X = 1.500000000000000000
+    Scale.Y = 1.500000000000000000
+    Size.Width = 42.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'playtoolbutton'
+    TabOrder = 1
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+end

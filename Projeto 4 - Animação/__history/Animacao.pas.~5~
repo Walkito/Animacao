@@ -1,0 +1,46 @@
+unit Animacao;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.Effects,
+  FMX.Filter.Effects, FMX.Ani, FMX.Edit;
+
+type
+  TForm1 = class(TForm)
+    ShapeTransitionEffect1: TShapeTransitionEffect;
+    Circle1: TCircle;
+    btn_play: TButton;
+    FloatAnimation1: TFloatAnimation;
+    Label1: TLabel;
+    txt_duracao: TEdit;
+    procedure btn_playClick(Sender: TObject);
+    procedure FloatAnimation1Process(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.btn_playClick(Sender: TObject);
+begin
+   FloatAnimation1.Enabled := True;
+end;
+
+procedure TForm1.FloatAnimation1Process(Sender: TObject);
+var txt : double;
+begin
+   txt := strToFloat(txt_duracao.Text);
+   FloatAnimation1.Duration := txt;
+end;
+
+end.
